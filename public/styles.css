@@ -30,7 +30,7 @@ body {
 
 /* Title Bar */
 .title-bar {
-  background: navy;
+  background: #592525;
   color: white;
   padding: 3px;
   display: flex;
@@ -85,7 +85,7 @@ body {
 }
 
 .menu:hover {
-  background: #000080;
+  background: #592525;
   color: #fff;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .dropdown a:hover {
-  background: #000080;
+  background: #592525;
   color: white;
 }
 
@@ -136,7 +136,7 @@ h2 {
 }
 
 a {
-  color: navy;
+  color: #592525;
   text-decoration: none;
 }
 
@@ -154,3 +154,35 @@ footer {
   color: white;
   font-family: "MS Sans Serif", "Arial", sans-serif;
 }
+/* ...existing code... */
+.blinkies-carousel {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: transparent;
+  margin: 10px 0;
+  align-items: center;
+  height: 40px; /* Adjust as needed */
+  position: relative;
+}
+
+.blinkies-carousel img {
+  margin: 0 8px;
+  height: 32px; /* Adjust as needed */
+  vertical-align: middle;
+  animation: blinkies-scroll 6s linear infinite;
+}
+
+#blinkies-bottom img {
+  animation-direction: reverse;
+}
+
+@keyframes blinkies-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+
+  document.querySelectorAll('.blinkies-carousel').forEach(carousel => {
+  const imgs = carousel.innerHTML;
+  carousel.innerHTML += imgs; // Duplicate images for seamless scroll
+});
