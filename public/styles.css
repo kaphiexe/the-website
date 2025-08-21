@@ -1,0 +1,156 @@
+/* Desktop */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.desktop {
+  height: 100vh;
+  width: 100vw;
+  background: url("desktop-bg.png") center/cover no-repeat;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Window */
+.window {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 4px 4px #000;
+  font-family: "MS Sans Serif", "Arial", sans-serif;
+  font-size: 14px;
+}
+
+/* Title Bar */
+.title-bar {
+  background: navy;
+  color: white;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.title-bar .buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.title-bar .btn {
+  font-family: monospace;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  background: #c0c0c0;
+  cursor: pointer;
+}
+
+.title-bar .btn:active {
+  border: 2px solid #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Menu Bar */
+.menu-bar {
+  background: #c0c0c0;
+  display: flex;
+  gap: 15px;
+  padding: 3px 5px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #404040;
+  border-top: 2px solid #404040;
+  font-size: 13px;
+}
+
+.menu {
+  position: relative;
+  cursor: default;
+}
+
+.menu span {
+  padding: 2px 6px;
+}
+
+.menu:hover {
+  background: #000080;
+  color: #fff;
+}
+
+/* Dropdowns */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  min-width: 120px;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: black;
+  padding: 4px 8px;
+  display: block;
+  font-size: 13px;
+}
+
+.dropdown a:hover {
+  background: #000080;
+  color: white;
+}
+
+.menu:hover .dropdown {
+  display: flex;
+}
+
+/* Content */
+.content {
+  padding: 15px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+a {
+  color: navy;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  font-family: "MS Sans Serif", "Arial", sans-serif;
+}
